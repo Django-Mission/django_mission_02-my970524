@@ -28,7 +28,7 @@ class Faq(models.Model):
     answer = models.TextField('답변 내용')
     writer = models.ForeignKey(to=User, on_delete=models.CASCADE, verbose_name='작성자')
     created_at = models.DateTimeField('작성일시', auto_now_add=True)
-    updater = models.DateTimeField('최종 수정자')
+    updater = models.CharField('최종 수정자', max_length=255, default='작성자와 동일')
     updated_at = models.DateTimeField('최종 수정일시', auto_now=True)
 
 
