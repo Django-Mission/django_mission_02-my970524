@@ -36,8 +36,7 @@ class Faq(models.Model):
         to=User, 
         verbose_name='최종 수정자', 
         related_name='updated_posts',
-        blank=True,
-        null=True
+        blank=True
     )
     updated_at = models.DateTimeField('최종 수정일시', auto_now=True)
 
