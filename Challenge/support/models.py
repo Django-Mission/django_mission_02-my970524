@@ -27,9 +27,9 @@ class Inquiry(models.Model):
     title = models.TextField('제목')
     email = models.CharField('이메일', max_length=320)
     phone_number_regex = RegexValidator(
-        regex=r'^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$'
+        regex=r'^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$'
     )
-    phone_number = models.CharField('전화번호', max_length=11)
+    phone_number = models.CharField('전화번호', max_length=13)
     content = models.TextField('내용')
     image = models.ImageField(verbose_name='이미지', null=True, blank=True)
 
