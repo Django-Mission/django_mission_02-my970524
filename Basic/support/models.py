@@ -23,7 +23,7 @@ class Faq(models.Model):
         '카테고리', 
         max_length=15, 
         choices=CATEGORY_CHOICES, 
-        default=CATEGORY_CHOICES[0][0]
+        default=GENERAL
     )
     answer = models.TextField('답변 내용')
     writer = models.ForeignKey(

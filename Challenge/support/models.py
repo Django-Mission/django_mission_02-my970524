@@ -22,7 +22,7 @@ class Inquiry(models.Model):
         '카테고리', 
         max_length=15, 
         choices=CATEGORY_CHOICES, 
-        default=CATEGORY_CHOICES[0][0]
+        default=GENERAL
     )
     title = models.TextField('제목')
     email = models.CharField('이메일', max_length=320)
